@@ -1,36 +1,76 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<script src="class="icon brands fa-twitch"></script>
-		<title>hi1206</title>
+		<title>김하이</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
 				<!-- Header -->
 					<header id="header">
-						<h1>김하이</h1>
-						<p>미쳐가는 &nbsp;&bull;&nbsp; 이상한 &nbsp;&bull;&nbsp; 엿장수</p>
+						<div class="logo">
+							<span class="icon brands fa-twitch"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>김하이</h1>
+								<p>김하이는 <a href="https://www.twitch.tv/hi_1206">트위치</a> 와 <br /><a href="https://www.youtube.com/channel/UCOsSvTmOcw0EjpFsL7BXCIw">유튜브</a> 를 하는 고릴라입니다.</p>
+							</div>
+						</div>
 						<nav>
 							<ul>
-								<li><a href="https://www.twitch.tv/hi_1206" class="icon brands fa-twitch"><span class="label">twitch</span></a></li>
-								<li><a href="https://www.youtube.com/channel/UCOsSvTmOcw0EjpFsL7BXCIw" class="icon brands fa-youtube"><span class="label">youtube</span></a></li>
-								<li><a href="https://discord.gg/xjFZg8N" class="icon brands fa-discord"><span class="label">discord</span></a></li>
+								<li><a href="#twitch">트위치</a></li>
+								<li><a href="#tgd">트게더</a></li>
+								<li><a href="#discord">디스코드</a></li>
+								<li><a href="#twip">트윕</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
 						</nav>
 					</header>
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.classList.remove('is-preload'); }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
-</html>
+
+				<!-- Main -->
+					<div id="main">
+						<!-- twitch -->
+							<article id="twitch">
+								<h2 class="major">twitch</h2>
+								<span class="image main"></span>
+								      <body>
+    								<!-- Add a placeholder for the Twitch embed -->
+    								<div id="twitch-embed"></div>
+
+    								<!-- Load the Twitch embed script -->
+    								<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+    								<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element. -->
+    								<script type="text/javascript">
+      								var embed = new Twitch.Embed("twitch-embed", {
+        								width: 750,
+        								height: 500,
+        								channel: "hi_1206",
+        								layout: "video",
+        								autoplay: true,
+										// Only needed if this page is going to be embedded on other websites
+        								parent: ["embed.example.com", "othersite.example.com"]
+      								});
+
+      								embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+        								var player = embed.getPlayer();
+        								player.play();
+      								});
+    								</script>
+									  </body>
+								<body>
+									<iframe id="twitch-chat-embed"
+        								src="https://www.twitch.tv/embed/hi_1206/chat?parent=hi1206.live"
+        								height="500"
+        								width="350">
+									</iframe>
+								</body>
+
+							</article>
