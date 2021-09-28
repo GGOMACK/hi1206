@@ -8,9 +8,24 @@
 		<noscript>
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
+
+		<script type="text/javascript">
+			// F12 버튼 방지
+			$(document).ready(function(){ $(document).bind('keydown',function(e){
+				if ( e.keyCode === 123 /* F12 */) {
+					e.preventDefault(); e.returnValue = false; } }); });
+			// 우측 클릭 방지
+			document.onmousedown=disableclick;
+			status="Right click is not available.";
+			function disableclick(event){
+				if (event.button===2) {
+					alert(status); return false; } }
+		</script>
+
 	</head>
 	<body class="is-preload">
-
+		<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
+		
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -119,6 +134,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+		</body>
 	</body>
 </html>
