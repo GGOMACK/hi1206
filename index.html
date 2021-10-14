@@ -61,80 +61,28 @@
 								<h2 class="major">twitch</h2>
 									<body>
     										<div class="twitch">
-  											<div class="twitch-video">
-    												<iframe
-      													src="https://player.twitch.tv/?channel=hi_1206&parent=www.hi1206.live&autoplay=false"
-      													frameborder="0"
-      													scrolling="no"
-      													allowfullscreen="true"
-      													height="100%"
-      													width="100%">
-    												</iframe>
-  											</div>
-											
-  											<div class="twitch-chat">
-    												<iframe
-      													frameborder="0"
-      													scrolling="no"
-      													src="https://www.twitch.tv/embed/hi_1206/chat?parent=www.hi1206.live"
-      													height="100%"
-      													width="100%">
-    												</iframe>
-  											</div>
-										</div>
-										
-										.twitch .twitch-video {
-  										  padding-top: 56.25%;
-  										  position: relative;
-  										  height: 0;
-										}
-
-										.twitch .twitch-video iframe {
-  										  position: absolute;
-  										  width: 100%;
-  										  height: 100%;
-  										  top: 0;
-										}
-										
-										@media screen and (min-width: 850px) {
-  										  .twitch {
-    										  position: relative;
-  										}
-
-  										.twitch .twitch-video {
-    										  width: 75%;
-    										  padding-top: 42.1875%;
-  										}
-
-  										.twitch .twitch-chat {
-    										  width: 25%;
-    										  height: auto;
-    										  position: absolute;
-    										  top: 0;
-    										  right: 0;
-    										  bottom: 0;
-  										}
+  											
 										<!-- Add a placeholder for the Twitch embed -->
-<div id="twitch-embed"></div>
+											<div id="twitch-embed"></div>
 
-<!-- Load the Twitch embed script -->
-<script src="https://player.twitch.tv/js/embed/v1.js"></script>
+										<!-- Load the Twitch embed script -->
+											<script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-<!-- Create a Twitch.Player object. This will render within the placeholder div -->
-<script type="text/javascript">
-  new Twitch.Embed("twitch-embed-dakotaz", {
-    width: 570,
-    height: 320,
-    channel: "hi_1206",
-    layout: "video",
-    autoplay: false
-  });
-  embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-    var player = embed.getPlayer();
-    player.play();
-  });
-</script>
-</script>
+										<!-- Create a Twitch.Player object. This will render within the placeholder div -->
+											<script type="text/javascript">
+  												new Twitch.Embed("twitch-embed-dakotaz", {
+    												  width: 570,
+    												  height: 320,
+    												  channel: "hi_1206",
+    												  layout: "video",
+    												  autoplay: false
+  												});
+  												embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
+    												var player = embed.getPlayer();
+    												player.play();
+  												});
+												</script>
+											</script>
 									</body>
 							</article>
 
