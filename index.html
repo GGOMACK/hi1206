@@ -8,113 +8,59 @@
 		<noscript>
 			<link rel="stylesheet" href="assets/css/noscript.css" />
 		</noscript>
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-		<script type="text/javascript">
-			// F12 버튼 방지
-			$(document).ready(function(){ $(document).bind('keydown',function(e){
-				if ( e.keyCode === 123 /* F12 */) {
-					e.preventDefault(); e.returnValue = false; } }); });
-			// 우측 클릭 방지
-			document.onmousedown=disableclick;
-			status="Right click is not available.";
-			function disableclick(event){
-				if (event.button===2) {
-					alert(status); return false; } }
-		</script>
 
 	</head>
-	<body class="is-preload">
-		<body oncontextmenu='return false' onselectstart='return false' ondragstart='return false'>
-		
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
+						<nav>
+							<ul>
+								<li>
+									<a href='https://twip.kr/hi_1206' target='_blank'>트윕</a>
+								</li>
+
+								<li>
+									<a href='https://han.gl/ajSa4' target='_blank'>유튜브</a>
+								</li>
+
+								<li>
+									<a href='https://twip.kr/hi_1206' target='_blank'>트윕</a>
+								</li>
+							</ul>
+						</nav>
+
 						<div class="logo">
 							<span class="icon brands fa-twitch"></span>
 						</div>
+
 						<div class="content">
 							<div class="inner">
 								<h1>김하이</h1>
-								<p>김하이는 <a href="https://www.twitch.tv/hi_1206">트위치</a> 와 <br /><a href="https://www.youtube.com/channel/UCOsSvTmOcw0EjpFsL7BXCIw">유튜브</a> 를 하는 자칭 여신 입니다.</p>
+								<p>김하이는 <a href="https://www.twitch.tv/hi_1206">트위치</a>와 <a href="https://www.youtube.com/channel/UCOsSvTmOcw0EjpFsL7BXCIw">유튜브</a>를 하는<br> 스트리머입니다.</br> </p>
 							</div>
 						</div>
+
 						<nav>
 							<ul>
-								<li><a href="#twitch">트위치</a></li>
+								<li>
+									<a href='https://www.twitch.tv/hi_1206' target='_blank'>트위치</a>
+								</li>
 
-								<li><a href="#tgd">트게더</a></li>
+								<li>
+									<a href='https://tgd.kr/s/hi_1206' target='_blank'>트게더</a>
+								</li>
 
-								<li><a href="#discord">디스코드</a></li>
-
-								<li><a href="#twip">트윕</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
+								<li>
+									<a href='https://discord.gg/xjFZg8N' target='_blank'>디스코드</a>
+								</li>
 							</ul>
 						</nav>
 					</header>
-
-				<!-- Main -->
-					<div id="main">
-						<!-- twitch -->
-							<article id="twitch">
-								<h2 class="major">twitch</h2>
-									<body>
-    										<div class="twitch">
-  											
-										<!-- Add a placeholder for the Twitch embed -->
-											<div id="twitch-embed"></div>
-
-										<!-- Load the Twitch embed script -->
-											<script src="https://player.twitch.tv/js/embed/v1.js"></script>
-
-										<!-- Create a Twitch.Player object. This will render within the placeholder div -->
-											<script type="text/javascript">
-  												new Twitch.Embed("twitch-embed-dakotaz", {
-    												  width: 570,
-    												  height: 320,
-    												  channel: "hi_1206",
-    												  layout: "video",
-    												  autoplay: false
-  												});
-  												embed.addEventListener(Twitch.Embed.VIDEO_READY, () => {
-    												var player = embed.getPlayer();
-    												player.play();
-  												});
-												</script>
-											</script>
-									</body>
-							</article>
-
-						<!-- tgd -->
-							<article id="tgd">
-								<h2 class="major">트게더</h2>
-									<span class="image main"></span>
-										<iframe id="twitch-chat-embed"
-												src="https://tgd.kr/s/hi_1206=hi1206.live"
-												height="500"
-												width="350"
-												right="100">
-										</iframe>
-							</article>
-
-						<!-- discord -->
-							<article id="discord">
-								<h2 class="major">discord</h2>
-									<span class="image main"></span>
-							</article>
-
-						<!-- twip -->
-							<article id="twip">
-								<h2 class="major">twip</h2>
-									<span class="image main"></span>
-							</article>
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-					</footer>
-
 			</div>
 
 		<!-- BG -->
@@ -126,6 +72,4 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-		</body>
-	</body>
 </html>
